@@ -21,7 +21,7 @@
       
     .icon-small { 
         width: 17px;
-         margin-right: 5px;
+        margin-right: 5px;
     }
     
     .city-feature { font-size: 90%; }
@@ -37,17 +37,29 @@
     .row,
     .hero_bg-text-box { padding: 0 4%; }
     
-    .col { width: 100%; }
+    .col { 
+        width: 100%;
+        margin: 0 0 4
+            % 0;
+    }
     
     .main-nav { display: none; }
     
     .section-features {margin-bottom: 40px;}
+    
+    h1 { font-size: 180%; }
+    h2 { font-size: 150%; }
+    
+    .long-copy {
+        width: 100%;
+        margin-left: 0% ;
+    }
     
 }
 
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px){
-    
+    section { padding: 250px 0; }
 }
 
