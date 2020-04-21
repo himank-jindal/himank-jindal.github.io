@@ -391,12 +391,14 @@ footer {
 .footer-nav {
     list-style: none;
     float: left;
+    display: inline-block;
 }
 
 
 .social-links {
     list-style: none;
-    float: right; 
+    float: right;
+    display: inline-block;
 }
 
 
