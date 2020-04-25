@@ -230,8 +230,8 @@ a:active {
 
 
 header {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)) ), url(img/hero_bg.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(img/hero_bg.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), (rgba(0, 0, 0, 0.7)) ), url(img/hero_bg-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(img/hero_bg-min.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
