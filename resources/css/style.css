@@ -11,17 +11,20 @@ orange color: #e67e22;
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; 
 }
 
 
-html {
+html,
+body {
     background-color: #fff; 
     color: #555;
     font-family: 'Lato','Arial',sans-serif;
     font-weight: 300;
     font-size: 20px; 
-    text-rendering: optimizeLegibility; 
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 
@@ -155,6 +158,7 @@ a:visited {
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: 1px solid #e67e22;
+    -webkit-transition: border bottom 0.2s, color 0.2s;
     transition: border bottom 0.2s, color 0.2s;
 }
 
@@ -176,6 +180,7 @@ a:active {
     font-weight: 300; 
     text-decoration: none; 
     border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
@@ -200,7 +205,23 @@ a:active {
 .btn-full:hover,
 .btn-full:active {
     border:  1px solid #cf6d17;
+} 
+
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border:  1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+    position: absolute;
+    margin-left: 270px;
 }
+
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border:  1px solid #cf6d17;
+} 
 
 
 /* --------------------------------------- */
@@ -209,6 +230,7 @@ a:active {
 
 
 header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)) ), url(img/hero_bg.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(img/hero_bg.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -222,6 +244,7 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -235,13 +258,7 @@ header {
 }
 
 
-.logo_me {
-    height: 110px;
-    width: auto;
-    border-radius: 50%;
-    float: right;
-    margin-top: 20px;
-}
+/* Main navi */
 
 
 .main-nav {
@@ -265,6 +282,7 @@ header {
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent; 
+    -webkit-transition: border-bottom 0.2s; 
     transition: border-bottom 0.2s;
 }
 
@@ -273,7 +291,57 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22; 
     
-} 
+}
+
+
+/* Mobile navi */
+
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+
+/* Sticky navi */
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+
+.sticky .main-nav { margin-top: 15px; }
+
+
+.sticky .main-nav li a:link, 
+.sticky .main-nav li a:visited  {
+    padding: 16px 0;
+    color: #000;
+}
+
+
+.sticky .logo {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    float: left;
+    margin: 5px 0;
+}
 
 
 /* --------IMAGE--------*/
@@ -315,7 +383,7 @@ header {
 
 
 .section-cities {
-    background-color: #bab8b8;
+    background-color: #ccc;
     color: #000;
     margin-top: -70px;
 }
@@ -327,6 +395,7 @@ header {
 
 
 .section-testimonials {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/hero_bg.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/hero_bg.jpg);
     background-size: cover;
     color: #fff;
@@ -374,3 +443,113 @@ cite img {
 }
 
 
+/* --------------------------------------- */
+/* FOOTER */
+/* --------------------------------------- */
+
+
+footer {
+    background-color: #ccc;
+    padding: 60px; 
+    font-size: 80%;
+}
+
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+
+.social-links {
+    list-style: none;
+    float: right; 
+}
+
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right:  20px;     
+}
+
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: o;
+    color: #000;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; 
+}
+
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #555555;    
+}
+
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 16 0%;
+}
+
+
+ion-social-facebook,
+ion-ios-email,
+ion-social-github {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+
+.ion-social-facebook:hover {
+    color: #000;
+}
+
+
+.ion-social-github:hover {
+    color: #000;
+}
+
+
+.ion-ios-email:hover {
+    color: #000;
+}
+
+
+footer p {
+    color: #000; 
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* --------------------------------------- */
+/* ANIMATIONS */
+/* --------------------------------------- */
+
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+
+.js--wp-1 .animated,
+.js--wp-2 .animated, 
+.js--wp-1 .animated {
+    opacity: 1;
+}
