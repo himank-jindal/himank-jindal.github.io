@@ -296,7 +296,9 @@ header {
 
 .other {
     color: #fff;
-
+    border-bottom: 1px solid #e67e22;
+    margin-bottom: 10px;
+}
 
 /* Mobile navi */
 
