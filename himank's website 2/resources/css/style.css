@@ -212,7 +212,7 @@ a:active {
 .btn-ghost:visited {
     border:  1px solid #e67e22;
     color: #fff;
-    margin-right: 15px;
+    margin-left: 15px;
     position: absolute;
     margin-left: 340px;
 }
